@@ -90,8 +90,7 @@ def time_stats(df):
     print('Most Popular Start Hour:', df['Start Time'].dt.hour.mode()[0])
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
-
+    print('-' * 40)
 
 def station_stats(df):
     """Displays statistics on the most popular stations and trip."""
@@ -148,8 +147,7 @@ def user_stats(df):
         print('Earliest, Most recent, Most Common Year of Birth are: ', df['Birth Year'].min(), df['Birth Year'].max(), df['Birth Year'].mode()[0])
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
-
+    print('-' * 40)
 
 def display_data(df):
     start_pos = 0
@@ -162,7 +160,7 @@ def display_data(df):
             res = input("Do you want to see the next 5 rows of data? Yes or No?")
         if res.lower() != 'yes':
             break
-        print(df.iloc[start_pos:end_pos,:])
+        print(df.iloc[start_pos:end_pos, :])
         start_pos += 5
         end_pos += 5
 
